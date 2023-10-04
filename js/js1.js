@@ -78,6 +78,7 @@ function carritoHtml() {
     row.classList.add(`filasArticulosGuardados`);
     const { imagen, titulo, precio, cantidad } = curso;
     row.innerHTML = `
+            <tr> 
             <td>
                  <img src = "${imagen}" class = "imagenEnCurso">
             </td>
@@ -90,9 +91,10 @@ function carritoHtml() {
             <td class="cantidadEnCarrito">
                  ${cantidad}
             </td>
-            <td>
-                Eliminar
+            <td class = "accioncarrito">
+                <button class = "btn__eliminar"> Eliminar </button>
             </td>
+            </tr>
             
          `;
     //AGREGAR EL HTML DEL CARRITO EN EL TBODY
